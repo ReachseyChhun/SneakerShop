@@ -31,6 +31,7 @@ label.logo {
   max-width: 1440px;
   margin: 0 auto;
 }
+
 /* Swiper */
 .swiper {
   width: 100%;
@@ -103,7 +104,7 @@ a:hover {
   gap: 15px;
   border-bottom: solid 3px black;
   padding-bottom: 7px;
-  margin: 10px 0 20px 0px;
+  margin: 32px 0 48px 12px;
   width: fit-content;
 }
 
@@ -167,6 +168,41 @@ a:hover {
   right: 15px;
   bottom: 30px;
 }
+
+.dis-price {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 14px;
+}
+
+.full-price {
+  color: red;
+}
+
+.footer {
+  background-color: #282c31;
+  width: full;
+  height: 80px;
+  display: flex;
+  gap: 42px;
+  justify-items: center;
+  align-items: center;
+  color: black;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.footer-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 20px;
+  flex-direction: column;
+  margin: auto 0;
+  padding-top: 12px;
+}
+
 @media (max-width: 952px) {
   label.logo {
     font-size: 30px;

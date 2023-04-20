@@ -1,0 +1,260 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Kantumruy Pro", sans-serif;
+}
+body {
+  font-family: montserrat;
+}
+
+/* --------------------NavBar Style -------------------*/
+
+nav {
+  background: #fff;
+  height: 80px;
+  width: 100%;
+  border-bottom: 2px solid rgb(175, 174, 174);
+  margin-bottom: 5px;
+  position: sticky;
+  top: 0px;
+  z-index: 999;
+}
+label.logo {
+  color: rgb(0, 0, 0);
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a {
+  color: rgb(0, 0, 0);
+  font-size: 17px;
+  font-weight: 00;
+  padding: 7px 13px;
+  text-transform: uppercase;
+}
+a.active,
+a:hover {
+  font-weight: 700;
+  border-bottom: 5px solid black;
+  transition: 0.5s;
+}
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
+
+@media (max-width: 952px) {
+  label.logo {
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 858px) {
+  .checkbtn {
+    display: block;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+    z-index: 9;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  a:hover,
+  a.active {
+    background: none;
+    color: black;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+
+/*------------ container style -------------*/
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 0 25px;
+}
+
+/*------------ image style -------------*/
+.productImg {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  width: 65%;
+}
+
+/* ------Produc tDetail-------- */
+.productDetail {
+  margin: 0 25px;
+  width: 35%;
+}
+
+.productNameMobile {
+  display: none;
+}
+
+.productName {
+  margin: 18px 0 8px 0;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000;
+  margin: 10px 0 10px 10px;
+}
+
+.priceMobile {
+  display: none;
+  font-size: 24px;
+  font-weight: 500;
+  color: #000;
+}
+
+.size {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000;
+  margin: 48px 0 24px 0;
+}
+
+.sizeBox {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+.shoeSize {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.shoeSize:hover {
+  background: #000;
+  color: #fff;
+}
+
+.shoeSize:active {
+  background: #000;
+  color: #fff;
+}
+
+.addCart {
+  width: 100%;
+  height: 50px;
+  border: none;
+  background: #000;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.addCart:hover {
+  background: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+
+.description {
+  font-size: 18px;
+  font-weight: 400;
+  color: #000;
+  text-align: left;
+  margin-top: 72px;
+}
+
+/* Set default size */
+.productImg img {
+  max-width: 100%;
+  height: auto;
+  border: black 2px solid;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* .productImg img:hover {
+  transform: scale(1.1);
+} */
+
+/* Set size for screen size under 720px */
+@media only screen and (max-width: 720px) {
+  .productImg {
+    grid-template-columns: 1fr;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .productDetail {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .productName {
+    display: none;
+  }
+
+  .price {
+    display: none;
+  }
+
+  .productNameMobile {
+    display: block;
+    margin: 14px 8px 3px 18px;
+  }
+
+  .priceMobile {
+    display: block;
+    margin: 0px 8px 24px 18px;
+  }
+}
