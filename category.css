@@ -1,0 +1,154 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Kantumruy Pro", sans-serif;
+}
+body {
+  font-family: montserrat;
+}
+
+/* --------------------NavBar Style -------------------*/
+
+nav {
+  background: #fff;
+  height: 80px;
+  width: 100%;
+  border-bottom: 2px solid rgb(175, 174, 174);
+  margin-bottom: 5px;
+  position: sticky;
+  top: 0px;
+  z-index: 999;
+}
+label.logo {
+  color: rgb(0, 0, 0);
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a {
+  color: rgb(0, 0, 0);
+  font-size: 17px;
+  font-weight: 00;
+  padding: 7px 13px;
+  text-transform: uppercase;
+}
+a.active,
+a:hover {
+  font-weight: 700;
+  border-bottom: 5px solid black;
+  transition: 0.5s;
+}
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
+
+@media (max-width: 952px) {
+  label.logo {
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 858px) {
+  .checkbtn {
+    display: block;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+    z-index: 9;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  a:hover,
+  a.active {
+    background: none;
+    color: black;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  max-width: 100%;
+  height: auto;
+}
+
+.cardPic {
+  max-width: 100%;
+  height: auto;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  scale: 1.1;
+}
+
+.details {
+  padding: 10px;
+  background-color: #fff;
+  text-align: center;
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 12px 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 18px;
+}
+
+@media screen and (max-width: 1240px) {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
